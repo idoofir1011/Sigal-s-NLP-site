@@ -42,7 +42,7 @@ const Services = () => {
       icon: '💼',
       title: 'אימון לקריירה',
       description: 'פיתוח מיומנויות מקצועיות, מנהיגות ותקשורת. קידום הקריירה שלך עם כלים מעשיים ואפקטיביים.',
-      path: '/contact',
+      path: '/career-coaching',
     },
   ]
 
