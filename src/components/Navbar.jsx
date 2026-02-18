@@ -46,18 +46,23 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-base font-medium transition-colors duration-300 whitespace-nowrap ${
-                  isActive(link.path)
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-gray-700 hover:text-primary hover:font-bold hover:underline'
-                }`}
+                className={`relative text-base font-medium whitespace-nowrap transition-colors duration-300
+                  after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary
+                  after:transition-all after:duration-300 after:ease-in-out
+                  ${
+                    isActive(link.path)
+                      ? 'text-primary after:w-full'
+                      : 'text-gray-700 hover:text-primary hover:font-bold after:w-0 hover:after:w-full'
+                  }`}
               >
                 {link.label}
               </Link>
             ))}
             <button
               onClick={handleTestimonialsClick}
-              className="text-base font-medium transition-colors duration-300 whitespace-nowrap text-gray-700 hover:text-primary hover:font-bold hover:underline"
+              className="relative text-base font-medium whitespace-nowrap transition-colors duration-300 text-gray-700 hover:text-primary hover:font-bold
+                after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary
+                after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
             >
               המלצות וכתבות
             </button>
