@@ -102,7 +102,7 @@ const Home = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+            {services.slice(0, -1).map((service, index) => (
               <Link
                 key={index}
                 to={service.path}
@@ -112,6 +112,16 @@ const Home = () => {
                 <h3 className="text-base font-bold text-gray-900 group-hover:text-primary transition-colors">{service.title}</h3>
               </Link>
             ))}
+          </div>
+          {/* Last item centered */}
+          <div className="mt-6 max-w-[200px] mx-auto">
+            <Link
+              to={services[services.length - 1].path}
+              className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1 group block"
+            >
+              <div className="text-4xl mb-3">{services[services.length - 1].icon}</div>
+              <h3 className="text-base font-bold text-gray-900 group-hover:text-primary transition-colors">{services[services.length - 1].title}</h3>
+            </Link>
           </div>
           <div className="text-center mt-10">
             <Link to="/services" className="btn-primary">
