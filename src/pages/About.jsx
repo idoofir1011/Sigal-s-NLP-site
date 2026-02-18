@@ -276,47 +276,19 @@ const About = () => {
             </div>
           </div>
 
-          {/* Media Coverage */}
+          {/* Media Coverage - Channel 13 YouTube */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">📰 כתבות בתקשורת</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-                <img
-                  src="/images/gallery1.webp"
-                  alt="כתבה 1"
-                  className="w-full object-cover h-64 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-white font-semibold text-sm">לצפייה בכתבה</span>
-                </div>
-                <div className="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">
-                  🏆 ערוץ 13
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-                <img
-                  src="/images/gallery2.webp"
-                  alt="כתבה 2"
-                  className="w-full object-cover h-64 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-white font-semibold text-sm">לצפייה בכתבה</span>
-                </div>
-                <div className="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">
-                  📺 כתבה
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
-                <img
-                  src="/images/gallery3.webp"
-                  alt="כתבה 3"
-                  className="w-full object-cover h-64 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <span className="text-white font-semibold text-sm">לצפייה בכתבה</span>
-                </div>
-                <div className="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full">
-                  📺 כתבה
+            <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">📺 כתבה בערוץ 13</h3>
+            <div className="flex justify-center">
+              <div className="w-full max-w-3xl rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/U_7N34PSQwQ"
+                    title="כתבה בערוץ 13 - סיגל פולוין"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="absolute top-0 left-0 w-full h-full"
+                  ></iframe>
                 </div>
               </div>
             </div>
