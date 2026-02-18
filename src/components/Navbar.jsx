@@ -11,8 +11,6 @@ const Navbar = () => {
     { path: '/', label: 'בית' },
     { path: '/about', label: 'אודות' },
     { path: '/services', label: 'תחומי פעילות' },
-    { path: '/empowerment', label: 'העצמה נשית' },
-    { path: '/personal-empowerment', label: 'העצמה אישית' },
     { path: '/contact', label: 'צור קשר' },
   ]
 
@@ -30,12 +28,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex gap-4 xl:gap-6">
+          <div className="hidden md:flex gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm xl:text-base font-medium transition-colors duration-300 whitespace-nowrap ${
+                className={`text-base font-medium transition-colors duration-300 whitespace-nowrap ${
                   isActive(link.path)
                     ? 'text-primary border-b-2 border-primary'
                     : 'text-gray-700 hover:text-primary'
@@ -47,7 +45,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <Link to="/contact" className="btn-primary">
               לשיחת ייעוץ
             </Link>
@@ -56,7 +54,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
           >
             <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
               {isOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16M4 18h16" />}
@@ -66,7 +64,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4">
+          <div className="md:hidden pb-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}

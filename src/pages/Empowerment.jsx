@@ -85,7 +85,7 @@ const Empowerment = () => {
               ))}
             </div>
             <p className="text-gray-700 text-lg mt-6 font-semibold">
-              אם ענית כן לאחד מהשאלות — את במקום הנכון. בואי נדבר.
+              אם ענית כן לאחת מהשאלות — את במקום הנכון. בואי נדבר.
             </p>
             <Link to="/contact" className="inline-block mt-6 btn-primary">
               השאירי פרטים לשיחה קצרה
