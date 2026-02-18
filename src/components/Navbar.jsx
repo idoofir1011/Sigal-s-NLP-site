@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   const isActive = (path) => location.pathname === path
 
@@ -13,6 +14,18 @@ const Navbar = () => {
     { path: '/services', label: 'תחומי פעילות' },
     { path: '/contact', label: 'צור קשר' },
   ]
+
+  const handleTestimonialsClick = () => {
+    setIsOpen(false)
+    if (location.pathname === '/about') {
+      document.getElementById('המלצות-וכתבות')?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/about')
+      setTimeout(() => {
+        document.getElementById('המלצות-וכתבות')?.scrollIntoView({ behavior: 'smooth' })
+      }, 300)
+    }
+  }
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -28,7 +41,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -42,6 +55,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={handleTestimonialsClick}
+              className="text-base font-medium transition-colors duration-300 whitespace-nowrap text-gray-700 hover:text-primary"
+            >
+              המלצות וכתבות
+            </button>
           </div>
 
           {/* CTA Button */}
@@ -77,6 +96,12 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
+            <button
+              onClick={handleTestimonialsClick}
+              className="block w-full text-right py-2 px-4 text-lg font-medium text-gray-700 hover:bg-gray-100"
+            >
+              המלצות וכתבות
+            </button>
             <Link to="/contact" onClick={() => setIsOpen(false)} className="block mt-4 mx-4 text-center btn-primary">
               לשיחת ייעוץ
             </Link>
