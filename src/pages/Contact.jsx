@@ -1,6 +1,21 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const WEB3FORMS_KEY = import.meta.env.VITE_WEB3FORMS_KEY
+
+// Input length limits
+const LIMITS = {
+  name: 100,
+  phone: 20,
+  email: 254,
+  message: 2000,
+}
+
+// Validation helpers
+const isValidPhone = (phone) => /^[\d\s\-+()]{7,20}$/.test(phone.trim())
+const isValidEmail = (email) => !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
+
+// Rate limit: one submission per 60 seconds
+const RATE_LIMIT_MS = 60_000
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,16 +28,43 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
+  const lastSubmitTime = useRef(0)
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    const { name, value } = e.target
+    const limit = LIMITS[name]
+    setFormData({ ...formData, [name]: limit ? value.slice(0, limit) : value })
     setError('')
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setLoading(true)
     setError('')
+
+    // Rate limiting
+    const now = Date.now()
+    if (now - lastSubmitTime.current < RATE_LIMIT_MS) {
+      const secondsLeft = Math.ceil((RATE_LIMIT_MS - (now - lastSubmitTime.current)) / 1000)
+      setError(`אנא המתן ${secondsLeft} שניות לפני שליחה נוספת.`)
+      return
+    }
+
+    // Client-side validation
+    if (!formData.name.trim()) {
+      setError('אנא הזן שם מלא.')
+      return
+    }
+    if (!isValidPhone(formData.phone)) {
+      setError('מספר הטלפון אינו תקין.')
+      return
+    }
+    if (!isValidEmail(formData.email)) {
+      setError('כתובת האימייל אינה תקינה.')
+      return
+    }
+
+    setLoading(true)
+    lastSubmitTime.current = Date.now()
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
