@@ -24,7 +24,7 @@ const Services = () => {
       icon: '👥',
       title: 'טיפול בחרם חברתי',
       description: 'ליווי מקצועי לילדים ומבוגרים המתמודדים עם חרם חברתי. בניית כלים להתמודדות ושיפור מיומנויות חברתיות.',
-      path: '/contact',
+      path: '/social-bullying',
     },
     {
       icon: '👶',

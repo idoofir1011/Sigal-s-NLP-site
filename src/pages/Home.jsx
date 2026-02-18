@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   const services = [
     { icon: '✈️', title: 'חרדות מטיסה', path: '/anxiety' },
-    { icon: '👥', title: 'טיפול בחרם חברתי', path: '/services' },
+    { icon: '👥', title: 'טיפול בחרם חברתי', path: '/social-bullying' },
     { icon: '👶', title: 'טיפול בחרדות ילדים', path: '/services' },
     { icon: '🥗', title: 'הרזייה דרך הראש', path: '/services' },
     { icon: '💼', title: 'אימון לקריירה', path: '/services' },
