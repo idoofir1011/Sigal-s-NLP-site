@@ -5,7 +5,7 @@ const Services = () => {
     {
       icon: '👩',
       title: 'העצמה נשית',
-      description: 'פיתוח עוצמה נשית יסייע לך רבות בתחומי החיים. תהליך המיועד להעצמת נשים בהתאמה אישית באמצעות כלי NLP.',
+      description: 'פיתוח עוצמה נשית תסייע לך רבות בתחומי החיים. תהליך המיועד להעצמת נשים בהתאמה אישית באמצעות כלי NLP.',
       path: '/empowerment',
     },
     {
