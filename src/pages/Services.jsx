@@ -36,7 +36,7 @@ const Services = () => {
       icon: '🥗',
       title: 'הרזייה דרך הראש',
       description: 'שינוי דפוסי חשיבה והתנהגות סביב אוכל ואכילה. הרזייה בת-קיימא שמתחילה מהמחשבה.',
-      path: '/contact',
+      path: '/weight-loss',
     },
     {
       icon: '💼',

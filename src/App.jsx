@@ -10,6 +10,7 @@ import Empowerment from './pages/Empowerment'
 import PersonalEmpowerment from './pages/PersonalEmpowerment'
 import Anxiety from './pages/Anxiety'
 import SocialBullying from './pages/SocialBullying'
+import WeightLoss from './pages/WeightLoss'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/personal-empowerment" element={<PersonalEmpowerment />} />
             <Route path="/anxiety" element={<Anxiety />} />
             <Route path="/social-bullying" element={<SocialBullying />} />
+            <Route path="/weight-loss" element={<WeightLoss />} />
           </Routes>
         </main>
         <Footer />

@@ -5,7 +5,7 @@ const Home = () => {
     { icon: '✈️', title: 'חרדות מטיסה', path: '/anxiety' },
     { icon: '👥', title: 'טיפול בחרם חברתי', path: '/social-bullying' },
     { icon: '👶', title: 'טיפול בחרדות ילדים', path: '/services' },
-    { icon: '🥗', title: 'הרזייה דרך הראש', path: '/services' },
+    { icon: '🥗', title: 'הרזייה דרך הראש', path: '/weight-loss' },
     { icon: '💼', title: 'אימון לקריירה', path: '/services' },
   ]
 
