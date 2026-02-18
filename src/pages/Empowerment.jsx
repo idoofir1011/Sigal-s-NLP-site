@@ -45,7 +45,7 @@ const Empowerment = () => {
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
                 עוצמה נשית
-                <span className="text-primary block mt-1">העצמה אישית לנשים</span>
+                <span className="text-primary block mt-1">העצמה נשית לנשים</span>
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 פיתוח עוצמה נשית יסייע לך רבות בתחומי החיים. סיגל פולוין מאסטר NLP מוסמכת,

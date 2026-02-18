@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom'
 const Services = () => {
   const services = [
     {
+      icon: '👩',
+      title: 'העצמה נשית',
+      description: 'פיתוח עוצמה נשית יסייע לך רבות בתחומי החיים. תהליך המיועד להעצמת נשים בהתאמה אישית באמצעות כלי NLP.',
+      path: '/empowerment',
+    },
+    {
       icon: '🧠',
       title: 'העצמה אישית',
       description: 'תהליך אישי מעמיק לגילוי הכוחות הפנימיים שלך, בניית ביטחון עצמי ויצירת חיים מלאי משמעות והגשמה.',
-      path: '/empowerment',
+      path: '/personal-empowerment',
     },
     {
       icon: '✈️',

@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
   const services = [
-    { icon: '🧠', title: 'העצמה אישית', path: '/empowerment' },
+    { icon: '👩', title: 'העצמה נשית', path: '/empowerment' },
+    { icon: '🧠', title: 'העצמה אישית', path: '/personal-empowerment' },
     { icon: '✈️', title: 'חרדות מטיסה', path: '/services' },
     { icon: '👥', title: 'טיפול בחרם חברתי', path: '/services' },
     { icon: '👶', title: 'טיפול בחרדות ילדים', path: '/services' },
