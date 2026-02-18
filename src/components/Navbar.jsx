@@ -47,7 +47,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 className={`relative text-base font-medium whitespace-nowrap transition-colors duration-300
-                  after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary
+                  after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:bg-primary
                   after:transition-all after:duration-300 after:ease-in-out
                   ${
                     isActive(link.path)
@@ -61,7 +61,7 @@ const Navbar = () => {
             <button
               onClick={handleTestimonialsClick}
               className="relative text-base font-medium whitespace-nowrap transition-colors duration-300 text-gray-700 hover:text-primary hover:font-bold
-                after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary
+                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-primary
                 after:transition-all after:duration-300 after:ease-in-out hover:after:w-full"
             >
               המלצות וכתבות
