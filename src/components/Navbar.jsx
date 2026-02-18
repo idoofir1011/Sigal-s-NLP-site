@@ -23,7 +23,7 @@ const Navbar = () => {
       navigate('/about')
       setTimeout(() => {
         document.getElementById('המלצות-וכתבות')?.scrollIntoView({ behavior: 'smooth' })
-      }, 300)
+      }, 600)
     }
   }
 
