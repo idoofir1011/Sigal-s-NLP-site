@@ -73,7 +73,7 @@ const Services = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {services.slice(0, -1).map((service, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1">
                 <div className="text-5xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
@@ -83,6 +83,17 @@ const Services = () => {
                 </Link>
               </div>
             ))}
+          </div>
+          {/* Last item centered */}
+          <div className="flex justify-center mt-8">
+            <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1 w-full md:w-1/2 lg:w-1/3">
+              <div className="text-5xl mb-4">{services[services.length - 1].icon}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{services[services.length - 1].title}</h3>
+              <p className="text-gray-600 leading-relaxed mb-4">{services[services.length - 1].description}</p>
+              <Link to={services[services.length - 1].path} className="text-primary font-semibold hover:underline">
+                לפרטים נוספים ←
+              </Link>
+            </div>
           </div>
         </div>
       </section>
