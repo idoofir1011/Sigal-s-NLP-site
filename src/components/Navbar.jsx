@@ -49,7 +49,7 @@ const Navbar = () => {
                 className={`text-base font-medium transition-colors duration-300 whitespace-nowrap ${
                   isActive(link.path)
                     ? 'text-primary border-b-2 border-primary'
-                    : 'text-gray-700 hover:text-primary'
+                    : 'text-gray-700 hover:text-primary hover:font-bold hover:underline'
                 }`}
               >
                 {link.label}
@@ -57,7 +57,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={handleTestimonialsClick}
-              className="text-base font-medium transition-colors duration-300 whitespace-nowrap text-gray-700 hover:text-primary"
+              className="text-base font-medium transition-colors duration-300 whitespace-nowrap text-gray-700 hover:text-primary hover:font-bold hover:underline"
             >
               המלצות וכתבות
             </button>
