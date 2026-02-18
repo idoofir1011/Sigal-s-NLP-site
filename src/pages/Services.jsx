@@ -18,7 +18,7 @@ const Services = () => {
       icon: '✈️',
       title: 'חרדות מטיסה',
       description: 'טיפול יעיל וממוקד בחרדות מטיסה באמצעות כלי NLP מתקדמים. חזרו לטוס בחופשיות וללא פחד.',
-      path: '/contact',
+      path: '/anxiety',
     },
     {
       icon: '👥',

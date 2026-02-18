@@ -8,6 +8,7 @@ import Services from './pages/Services'
 import Contact from './pages/Contact'
 import Empowerment from './pages/Empowerment'
 import PersonalEmpowerment from './pages/PersonalEmpowerment'
+import Anxiety from './pages/Anxiety'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/empowerment" element={<Empowerment />} />
             <Route path="/personal-empowerment" element={<PersonalEmpowerment />} />
+            <Route path="/anxiety" element={<Anxiety />} />
           </Routes>
         </main>
         <Footer />
