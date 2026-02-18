@@ -99,9 +99,9 @@ const Home = () => {
               יחד נמצא פתרונות לבעיה הספציפית שמטרידה אתכם, בהתאמה ייחודית לצרכים שלכם
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 auto-rows-fr">
             {/* Empowerment hover-split card */}
-            <div className="group relative col-span-2 md:col-span-1">
+            <div className="group relative col-span-2 md:col-span-1 row-span-1">
               {/* Default state */}
               <div className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
                 <div className="text-4xl mb-3">✨</div>
@@ -109,17 +109,17 @@ const Home = () => {
                 <p className="text-xs text-gray-400 mt-1">העבר עכבר לפרטים</p>
               </div>
               {/* Hover state - two sub-cards */}
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100 flex flex-col gap-3 h-full min-h-[120px]">
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100 flex flex-col gap-2 h-full">
                 <Link
                   to="/empowerment"
-                  className="flex-1 bg-primary/10 border border-primary/30 rounded-xl p-3 text-center hover:bg-primary/20 hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center group/sub"
+                  className="flex-1 bg-primary/10 border border-primary/30 rounded-xl p-3 text-center hover:bg-primary/20 hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center"
                 >
                   <div className="text-2xl mb-1">👩</div>
                   <h3 className="text-sm font-bold text-primary">העצמה נשית</h3>
                 </Link>
                 <Link
                   to="/personal-empowerment"
-                  className="flex-1 bg-secondary/10 border border-secondary/30 rounded-xl p-3 text-center hover:bg-secondary/20 hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center group/sub"
+                  className="flex-1 bg-secondary/10 border border-secondary/30 rounded-xl p-3 text-center hover:bg-secondary/20 hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center"
                 >
                   <div className="text-2xl mb-1">🧠</div>
                   <h3 className="text-sm font-bold text-secondary">העצמה אישית</h3>
@@ -132,7 +132,7 @@ const Home = () => {
               <Link
                 key={index}
                 to={service.path}
-                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1 group"
+                className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:-translate-y-1 group flex flex-col items-center justify-center"
               >
                 <div className="text-4xl mb-3">{service.icon}</div>
                 <h3 className="text-base font-bold text-gray-900 group-hover:text-primary transition-colors">{service.title}</h3>
