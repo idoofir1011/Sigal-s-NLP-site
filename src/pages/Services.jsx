@@ -109,7 +109,7 @@ const Services = () => {
             {process.map((step, index) => (
               <div key={index} className="text-center relative">
                 {index < process.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-primary/20"></div>
+                  <div className="hidden md:block absolute top-8 -left-1/2 w-full h-0.5 bg-primary/20"></div>
                 )}
                 <div className="relative z-10 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                   {step.step}
