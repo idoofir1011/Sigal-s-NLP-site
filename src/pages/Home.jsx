@@ -232,20 +232,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="section-title">כתבות והמלצות</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <img src="/images/gallery1.webp" alt="כתבה 1" className="rounded-2xl shadow-md w-full object-cover h-64 hover:shadow-xl transition-shadow" />
-            <img src="/images/gallery2.webp" alt="כתבה 2" className="rounded-2xl shadow-md w-full object-cover h-64 hover:shadow-xl transition-shadow" />
-            <img src="/images/gallery3.webp" alt="כתבה 3" className="rounded-2xl shadow-md w-full object-cover h-64 hover:shadow-xl transition-shadow" />
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
