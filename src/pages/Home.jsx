@@ -54,7 +54,7 @@ const Home = () => {
                   קרא עוד עליי
                 </Link>
               </div>
-              <div className="mt-10 flex items-center gap-8">
+              <div className="mt-10 flex items-center gap-4 sm:gap-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">39+</div>
                   <div className="text-gray-600 text-sm">ביקורות גוגל</div>
@@ -102,14 +102,14 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 auto-rows-fr">
             {/* Empowerment hover-split card */}
             <div className="group relative col-span-2 md:col-span-1 row-span-1">
-              {/* Default state */}
-              <div className="bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+              {/* Default state - desktop only (hover doesn't exist on touch screens) */}
+              <div className="hidden md:flex md:flex-col md:items-center md:justify-center bg-gray-50 rounded-2xl p-6 text-center border border-gray-100 transition-all duration-300 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none absolute inset-0">
                 <div className="text-4xl mb-3">✨</div>
                 <h3 className="text-base font-bold text-gray-900">העצמה</h3>
                 <p className="text-xs text-gray-400 mt-1">העבר עכבר לפרטים</p>
               </div>
-              {/* Hover state - two sub-cards */}
-              <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 scale-95 group-hover:scale-100 flex flex-col gap-2 h-full">
+              {/* Sub-cards - always visible on mobile, revealed on hover on desktop */}
+              <div className="md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 md:scale-95 md:group-hover:scale-100 flex flex-col gap-2 h-auto md:h-full">
                 <Link
                   to="/empowerment"
                   className="flex-1 bg-primary/10 border border-primary/30 rounded-xl p-3 text-center hover:bg-primary/20 hover:shadow-md transition-all duration-200 flex flex-col items-center justify-center"
@@ -155,6 +155,7 @@ const Home = () => {
               <img
                 src="/images/gallery1.webp"
                 alt="סיגל פולוין בפעולה"
+                loading="lazy"
                 className="rounded-2xl shadow-xl w-full object-cover max-h-96"
               />
             </div>

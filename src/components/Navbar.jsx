@@ -78,6 +78,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'סגור תפריט' : 'פתח תפריט'}
             className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary focus:outline-none"
           >
             <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">

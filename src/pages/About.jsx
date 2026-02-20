@@ -287,6 +287,8 @@ const About = () => {
                     title="כתבה בערוץ 13 - סיגל פולוין"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    sandbox="allow-same-origin allow-scripts allow-presentation allow-popups"
+                    referrerPolicy="strict-origin-when-cross-origin"
                     className="absolute top-0 left-0 w-full h-full"
                   ></iframe>
                 </div>
