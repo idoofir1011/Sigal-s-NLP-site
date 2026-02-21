@@ -12,7 +12,6 @@ const Navbar = () => {
     { path: '/', label: 'בית' },
     { path: '/about', label: 'אודות' },
     { path: '/services', label: 'תחומי פעילות' },
-    { path: '/contact', label: 'צור קשר' },
   ]
 
   const handleTestimonialsClick = () => {
@@ -66,6 +65,19 @@ const Navbar = () => {
             >
               המלצות וכתבות
             </button>
+            <Link
+              to="/contact"
+              className={`relative text-base font-medium whitespace-nowrap transition-colors duration-300
+                after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:bg-primary
+                after:transition-all after:duration-300 after:ease-in-out
+                ${
+                  isActive('/contact')
+                    ? 'text-primary after:w-full'
+                    : 'text-gray-700 hover:text-primary hover:font-bold after:w-0 hover:after:w-full'
+                }`}
+            >
+              צור קשר
+            </Link>
           </div>
 
           {/* CTA Button */}
@@ -108,6 +120,15 @@ const Navbar = () => {
             >
               המלצות וכתבות
             </button>
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className={`block py-2 px-4 text-lg font-medium ${
+                isActive('/contact') ? 'text-primary bg-primary/10' : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              צור קשר
+            </Link>
             <Link to="/contact" onClick={() => setIsOpen(false)} className="block mt-4 mx-4 text-center btn-primary">
               לשיחת ייעוץ
             </Link>
