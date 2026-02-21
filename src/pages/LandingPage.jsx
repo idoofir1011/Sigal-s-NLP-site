@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   const problems = [
-    { icon: '😰', text: 'חרדות שמונעות מכם לתפקד בחיי היומיום?' },
-    { icon: '🔄', text: 'דפוסי חשיבה שליליים שחוזרים שוב ושוב?' },
-    { icon: '🧱', text: 'תחושה שמשהו עוצר אתכם מלהגיע למטרות?' },
-    { icon: '😔', text: 'ביטחון עצמי נמוך שמשפיע על כל תחומי החיים?' },
+    { icon: '💭', text: 'חרדות שמונעות מכם לתפקד בחיי היומיום?' },
+    { icon: '🔁', text: 'דפוסי חשיבה שליליים שחוזרים שוב ושוב?' },
+    { icon: '🔒', text: 'תחושה שמשהו עוצר אתכם מלהגיע למטרות?' },
+    { icon: '💙', text: 'ביטחון עצמי נמוך שמשפיע על כל תחומי החיים?' },
   ]
 
   const testimonials = [
@@ -45,8 +45,8 @@ const LandingPage = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 text-yellow-800 font-semibold px-4 py-2 rounded-full text-sm mb-6">
-                🏆 מומלצת ערוץ 13 &nbsp;|&nbsp; ⭐ 5.0 · 39 ביקורות גוגל
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-6">
+                ✦ מאסטר NLP מוסמך &nbsp;·&nbsp; ⭐ 5.0 &nbsp;·&nbsp; 39 ביקורות גוגל
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
                 הגיע הזמן לשחרר
@@ -134,8 +134,8 @@ const LandingPage = () => {
               className="w-40 h-40 rounded-full object-cover shadow-xl border-4 border-primary/20 flex-shrink-0"
             />
             <div>
-              <span className="inline-block bg-yellow-50 border border-yellow-200 text-yellow-800 text-sm font-semibold px-3 py-1 rounded-full mb-3">
-                🏆 מומלצת ערוץ 13
+              <span className="inline-block bg-primary/10 border border-primary/20 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-3">
+                ✦ מאסטר NLP מוסמך
               </span>
               <h2 className="text-2xl font-bold text-gray-900 mb-2">סיגל פולוין — מאסטר NLP</h2>
               <p className="text-gray-600 leading-relaxed">
