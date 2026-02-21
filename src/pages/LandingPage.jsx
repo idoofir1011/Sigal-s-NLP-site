@@ -2,10 +2,43 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   const problems = [
-    { icon: '💭', text: 'חרדות שמונעות מכם לתפקד בחיי היומיום?' },
-    { icon: '🔁', text: 'דפוסי חשיבה שליליים שחוזרים שוב ושוב?' },
-    { icon: '🔒', text: 'תחושה שמשהו עוצר אתכם מלהגיע למטרות?' },
-    { icon: '💙', text: 'ביטחון עצמי נמוך שמשפיע על כל תחומי החיים?' },
+    {
+      icon: (
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.46 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+          <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.46 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+        </svg>
+      ),
+      text: 'חרדות שמונעות מכם לתפקד בחיי היומיום?',
+    },
+    {
+      icon: (
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+          <path d="M21 3v5h-5"/>
+          <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+          <path d="M8 16H3v5"/>
+        </svg>
+      ),
+      text: 'דפוסי חשיבה שליליים שחוזרים שוב ושוב?',
+    },
+    {
+      icon: (
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      ),
+      text: 'תחושה שמשהו עוצר אתכם מלהגיע למטרות?',
+    },
+    {
+      icon: (
+        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+      ),
+      text: 'ביטחון עצמי נמוך שמשפיע על כל תחומי החיים?',
+    },
   ]
 
   const testimonials = [
@@ -46,7 +79,7 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary font-semibold px-4 py-2 rounded-full text-sm mb-6">
-                ✦ מאסטר NLP מוסמך &nbsp;·&nbsp; ⭐ 5.0 &nbsp;·&nbsp; 39 ביקורות גוגל
+                ✦ מאסטר NLP מוסמך
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
                 הגיע הזמן לשחרר
@@ -85,7 +118,9 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {problems.map((p, i) => (
               <div key={i} className="flex items-center gap-4 bg-gray-50 rounded-xl p-4 text-right border border-gray-100">
-                <span className="text-3xl flex-shrink-0">{p.icon}</span>
+                <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                  {p.icon}
+                </div>
                 <p className="text-gray-700 font-medium">{p.text}</p>
               </div>
             ))}
@@ -104,7 +139,6 @@ const LandingPage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">מה אומרים הלקוחות?</h2>
-            <p className="text-gray-500">מבוסס על 39 ביקורות גוגל ⭐ 5.0</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t, i) => (
